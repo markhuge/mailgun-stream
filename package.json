@@ -1,6 +1,6 @@
 {
   "name": "mailgun-stream",
-  "version": "0.2.3",
+  "version": "1.0.0",
   "description": "Pipe messages to Mailgun",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   "author": "Mark Wilkerson <mark@segfawlt.net>",
   "license": "MIT",
   "dependencies": {
-    "mailgun-send": "0.0.3",
+    "mailgun-send": "~1.0.0",
     "through2": "0.6.3"
   },
   "repository": {
