@@ -10,11 +10,17 @@ Streaming module for mailgun
 ## Usage
 
 ```JS
-var mail     = require('mailgun-stream'),
-    defaults = require('stream-defaults');
+const mail     = require('mailgun-stream');
+const domain   = "myapp.com";
+const key      = "<mailgun api key>";
 
 // Authenticate to mailgun
-mail.config({key: 'my-mailgun-api-key'});
+mail.config({
+  key: key,
+  domain: domain,
+  sender: `noreply@${domain}`
+});
+
 
 // Setup a some defaults
 var opts = {
