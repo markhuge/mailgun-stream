@@ -1,5 +1,8 @@
-var thru = require('through2'),
-    mail = require('mailgun-send');
+/* jshint esversion: 6, node: true */
+
+const thru = require('through2');
+const mail = require('mailgun-send');
+
 
 exports.config = function (opts) { mail.config(opts); };
 exports.send = function (obj) {
