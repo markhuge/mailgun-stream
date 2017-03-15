@@ -13,11 +13,16 @@ exports.send = function (obj) {
 
 function transform (obj, encoding, callback) {
   if (typeof obj != 'object') return callback("Expecting object, but got " + typeof obj);
-  mail.send(obj);
+  mail.send(obj, log);
   this.push(obj);
   callback();
 }
 
 function flush (callback) {
   callback();
+}
+
+function log (err, msg) {
+  if (err) console.error(err);
+  console.info(msg);
 }
